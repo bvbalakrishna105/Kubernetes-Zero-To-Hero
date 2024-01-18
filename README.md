@@ -72,3 +72,12 @@ https://kubernetes.io/docs/reference/kubectl/quick-reference/
 
 A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. As such, it is often used to guarantee the availability of a specified number of identical Pods.
 
+# What is service in kubernetes ?
+
+In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster.
+
+# What is deployments in kubernetes ?
+
+A Deployment provides declarative updates for Pods and ReplicaSets.
+
+You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
