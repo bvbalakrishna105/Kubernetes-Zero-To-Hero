@@ -9,37 +9,34 @@ What kind of problems k8s going to address it?
 
 1. Standalone systems
 2. Scaling 
-3. Healing problem
+3. Healing
 4. Docker is not enterprise solution
 
-What is kuberneters cluster Architecture and each components ?
+What is kuberneters Cluster Architecture and each components ?
 
 K8s are broadly divided into two catogeries
 1. Control Plane (master/primary)
 2. Data Plane (slave/standy/secondary/worker/Node)
 
-In the the Data Plane
+In the Data Plane
 
-1. Pod
-
+1. Pod 
     Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
 
 2. Kubelet
-
     The kubelet is the primary "node agent" that runs on each node. It can register the node with the apiserver using one of: the hostname; a flag to override the hostname; or specific logic for a cloud provider.
 
     The kubelet works in terms of a PodSpec. A PodSpec is a YAML or JSON object that describes a pod.
 
 3. Kube-proxy
-
     The Kubernetes network proxy runs on each node. This reflects services as defined in the Kubernetes API on each node and can do simple TCP, UDP, and SCTP stream forwarding or round robin TCP, UDP, and SCTP forwarding across a set of backends.
 
 4. Container Runtime
-
     You need to install a container runtime into each node in the cluster so that Pods can run there
 
 
 In the Control plane
+
 1. Kube-api-server
     The Kubernetes API server validates and configures data for the api objects which include pods, services, replicationcontrollers, and others. The API Server services REST operations and provides the frontend to the cluster's shared state through which all other components interact.
 
@@ -50,9 +47,15 @@ In the Control plane
 
 3. Scheduler
     The Kubernetes scheduler is a control plane process which assigns Pods to Nodes. The scheduler determines which Nodes are valid placements for each Pod in the scheduling queue according to constraints and available resources. The scheduler then ranks each valid Node and binds the Pod to a suitable Node.
+
 4. etcd
     etcd is a consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
-    
-5. Cloud-Controller-Manager (CCM) (optional)
 
+5. Cloud-Controller-Manager (CCM) (optional)
     The cloud-controller-manager is a Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
+
+what is kubectl ?
+
+Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+
+
