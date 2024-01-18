@@ -37,21 +37,21 @@ In the Data Plane
 
 In the Control plane
 
-1. Kube-api-server
+1. Kube-api-server:
     The Kubernetes API server validates and configures data for the api objects which include pods, services, replicationcontrollers, and others. The API Server services REST operations and provides the frontend to the cluster's shared state through which all other components interact.
 
-2. Controller Manager
+2. Controller Manager:
     The Kubernetes controller manager is a daemon that embeds the core control loops shipped with Kubernetes.
 
     In Kubernetes, a controller is a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.
 
-3. Scheduler
+3. Scheduler:
     The Kubernetes scheduler is a control plane process which assigns Pods to Nodes. The scheduler determines which Nodes are valid placements for each Pod in the scheduling queue according to constraints and available resources. The scheduler then ranks each valid Node and binds the Pod to a suitable Node.
 
-4. etcd
+4. etcd:
     etcd is a consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
 
-5. Cloud-Controller-Manager (CCM) (optional)
+5. Cloud-Controller-Manager (CCM) (optional):
     The cloud-controller-manager is a Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
 
 what is kubectl ?
