@@ -63,3 +63,10 @@ What is minikube ?
 minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
 
 More details: https://minikube.sigs.k8s.io/docs/start/
+
+Is there any quick reference guide for kubernetes ?
+
+kubectl Quick Reference
+https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
+
