@@ -1,18 +1,16 @@
-# Kubernetes-Zero-To-Hero
-
-What is kubernetes ?
+# What is kubernetes ?
 
 As per wikipedia defination 
 Kubernetes, commonly abbreviated K8s is an open-source container orchestration system for automating software deployment, scaling, and management. Originally designed by Google, the project is now maintained by the Cloud Native Computing Foundation (CNCF).
 
-What kind of problems k8s going to address it?
+# What kind of problems k8s going to address it?
 
-1. Standalone systems
-2. Scaling 
-3. Healing
+1. Single node host(s) in nature
+2. Auto Scaling is not there 
+3. Auto Healing is not there
 4. Docker is not enterprise solution
 
-What is kuberneters Cluster Architecture and each components ?
+# What is kuberneters Cluster Architecture and each components ?
 
 K8s are broadly divided into two catogeries
 1. Control Plane (master/primary)
@@ -54,19 +52,23 @@ In the Control plane
 5. Cloud-Controller-Manager (CCM) (optional): 
     The cloud-controller-manager is a Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
 
-What is kubectl ?
+# What is kubectl ?
 
 Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
 
-What is minikube ?
+# What is minikube ?
 
-minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+minikube is local Kubernetes (single node architecture), focusing on making it easy to learn and develop for Kubernetes.
 
 More details: https://minikube.sigs.k8s.io/docs/start/
 
-Is there any quick reference guide for kubernetes ?
-
+# Is there any quick reference guide for kubernetes ?
+Yes !!! 
 kubectl Quick Reference
 https://kubernetes.io/docs/reference/kubectl/quick-reference/
 
+
+# What is replicaset in kubernetes ?
+
+A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. As such, it is often used to guarantee the availability of a specified number of identical Pods.
 
