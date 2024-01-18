@@ -1,6 +1,6 @@
 # What is kubernetes ?
 
-As per wikipedia defination 
+As per the wikipedia definition 
 Kubernetes, commonly abbreviated K8s is an open-source container orchestration system for automating software deployment, scaling, and management. Originally designed by Google, the project is now maintained by the Cloud Native Computing Foundation (CNCF).
 
 # What kind of problems k8s going to address it?
@@ -35,7 +35,7 @@ In the Data Plane
 
 In the Control plane
 
-1. Kube-api-server:
+1. Kube-API-SERVER (Heart of the system):
     The Kubernetes API server validates and configures data for the api objects which include pods, services, replicationcontrollers, and others. The API Server services REST operations and provides the frontend to the cluster's shared state through which all other components interact.
 
 2. Controller Manager:
@@ -55,6 +55,8 @@ In the Control plane
 # What is kubectl ?
 
 Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+
+More details: https://kubernetes.io/docs/tasks/tools/
 
 # What is minikube ?
 
@@ -81,3 +83,45 @@ In Kubernetes, a Service is a method for exposing a network application that is 
 A Deployment provides declarative updates for Pods and ReplicaSets.
 
 You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
+
+# How to deploy your first App ?
+For development purpose install minikube in your linux/windows/macOS machine
+
+Once it's done, 
+
+using "minikube start" command to start your cluster
+
+create a pod.yml file as below 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+run "kubectl create -f pod.yml" from the minikube command line
+
+once it's done
+
+to know about your pod, run below command 
+
+kubectl get pods 
+
+for more details 
+
+kubectl get pods -o wide
+
+you wanted connect your pod 
+
+log-in your cluster by using below command
+
+minikube ssh
+
+and run curl <IP address of your pod>
+
+
