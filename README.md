@@ -51,11 +51,15 @@ In the Control plane
 4. etcd:
     etcd is a consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
 
-5. Cloud-Controller-Manager (CCM) (optional):
+5. Cloud-Controller-Manager (CCM) (optional): 
     The cloud-controller-manager is a Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
 
-what is kubectl ?
+What is kubectl ?
 
 Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
 
+What is minikube ?
 
+minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+
+More details: https://minikube.sigs.k8s.io/docs/start/
